@@ -1,7 +1,9 @@
 
+const url = '' //for production
+// const url = 'http://localhost:3000' //for development
 
 const getWeather = (location, callback) => {
-  fetch(`http://localhost:3000/weather?address=${location}`)
+  fetch(`${url}/weather?address=${location}`)
     .then(res => {
       res.json().then(data => {
         if (data.error) {
