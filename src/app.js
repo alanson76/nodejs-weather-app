@@ -97,7 +97,7 @@ app.get('*', (req, res) => {
 })
 
 //server
-const serverPort = Number(PORT) | 3000
+const serverPort = Number(PORT) || 3000
 app.listen(serverPort, () => {
   console.log(`express server is running on port ${serverPort}`)
 })
