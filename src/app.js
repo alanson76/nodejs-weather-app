@@ -1,9 +1,8 @@
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
-const cors = require('cors')
-const { PORT } = require('../config/config')
 
+const { PORT } = require('../config/config')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
@@ -15,9 +14,6 @@ app.set('views', path.join(__dirname, '../templates/views'))
 hbs.registerPartials(path.join(__dirname, '../templates/partials'))
 //static files
 app.use(express.static(path.join(__dirname, '../public')))
-
-//cors
-// app.use(cors())
 
 //routes
 app.get('/', (req, res) => {
